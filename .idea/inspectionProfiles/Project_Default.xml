@@ -1,0 +1,17 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="DeprecatedTag" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteClassUsages" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteConstantUsages" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteMethodUsages" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteModifierDefinition" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LattePropertyUsages" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteTagVar" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteTemplateType" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteVarType" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="LatteVariablesProblems" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="ModifierNotAllowed" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="StaticPropertyUsages" enabled="true" level="WARNING" enabled_by_default="true" />
+  </profile>
+</component>
