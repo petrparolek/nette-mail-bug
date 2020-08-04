@@ -1,10 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="2193afa9-7d30-400c-8430-08315a3d4933" name="Default Changelist" comment="">
+    <list default="true" id="2193afa9-7d30-400c-8430-08315a3d4933" name="Default Changelist" comment="bugfix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/HomepagePresenter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/email.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/Presenters/templates/email.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Presenters/templates/email.latte" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/email.latte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Services/EmailSender.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Services/EmailSender.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/common.neon" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/common.neon" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +37,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsBowerSettings">
+    <node-interpreter value="project" />
+    <bower-package value="" />
+    <bower.json value="" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -77,10 +102,19 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Latte.LatteSettingsForm" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\playground\nette-mail-sandbox\app\templates" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\playground\nette-mail-sandbox\app\Services" />
       <recent name="D:\projects\playground\nette-mail-sandbox\app\lang" />
@@ -114,7 +148,8 @@
       <workItem from="1596487601931" duration="76000" />
       <workItem from="1596487904978" duration="276000" />
       <workItem from="1596488206056" duration="962000" />
-      <workItem from="1596536415461" duration="3076000" />
+      <workItem from="1596536415461" duration="6066000" />
+      <workItem from="1596547815736" duration="504000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1596488959941</created>
@@ -123,15 +158,49 @@
       <option name="project" value="LOCAL" />
       <updated>1596488959941</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="bugfix">
+      <created>1596539521400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1596539521400</updated>
+    </task>
+    <task id="LOCAL-00003" summary="bugfix">
+      <created>1596541071048</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1596541071048</updated>
+    </task>
+    <task id="LOCAL-00004" summary="bugfix">
+      <created>1596547514136</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1596547514136</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="75" width="814" height="729" key="#Intentions" timestamp="1596484937506">
@@ -150,18 +219,30 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="517" y="253" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1536.834@0.0.1536.834" timestamp="1596486930529" />
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser" timestamp="1596548225980">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="133" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834@0.0.1536.834" timestamp="1596548225980" />
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1596488665492">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="499" y="164" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.834@0.0.1536.834" timestamp="1596488665492" />
-    <state x="277" y="62" key="SettingsEditor" timestamp="1596487674010">
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1596547651604">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1596487674010" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1596489014930">
+    <state x="499" y="172" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1536.834@0.0.1536.834" timestamp="1596547651604" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog" timestamp="1596546999449">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1596489014930" />
+    <state x="93" y="93" width="1350" height="648" key="DiffContextDialog/0.0.1536.834@0.0.1536.834" timestamp="1596546999449" />
+    <state x="277" y="62" key="SettingsEditor" timestamp="1596547982892">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="277" y="62" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1596547982892" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1596547547219">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1596547547219" />
     <state x="570" y="323" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1596489004333">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

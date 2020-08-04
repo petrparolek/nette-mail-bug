@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace App\Services;
 
-use Latte\Engine;
 use Nette\Application\LinkGenerator;
+use Nette\Application\UI\ITemplate;
 use Nette\Application\UI\ITemplateFactory;
+use Nette\Localization\ITranslator;
 use Nette\Mail\IMailer;
 use Nette\Mail\Message;
 use PPIS\Settings\Entities\Settings;
@@ -15,58 +16,55 @@ use PPIS\Settings\Repositories\SettingsRepository;
 class EmailSender
 {
 
-	/**
-	 * @var LinkGenerator
-	 */
-	public $linkGenerator;
+    /**
+     * @var LinkGenerator
+     */
+    private $linkGenerator;
 
-	/**
-	 * @var ITemplateFactory
-	 */
-	public $templateFactory;
+    /**
+     * @var IMailer
+     */
+    private $mailer;
 
-	/**
-	 * @var IMailer
-	 */
-	public $mailer;
+    /**
+     * @var ITemplateFactory
+     */
+    private $templateFactory;
 
-	/**
-	 * @var SettingsRepository
-	 */
-	public $settingsRepository;
+    /**
+     * @var ITranslator
+     */
+    private $translator;
 
-	public function __construct(
-		LinkGenerator $linkGenerator,
-		ITemplateFactory $templateFactory,
-		IMailer $mailer,
-		SettingsRepository $settingsRepository
-	) {
-		$this->linkGenerator = $linkGenerator;
-		$this->templateFactory = $templateFactory;
-		$this->mailer = $mailer;
-		$this->settingsRepository = $settingsRepository;
-	}
+    public function __construct(LinkGenerator $linkGenerator, IMailer $mailer, ITemplateFactory $templateFactory, ITranslator $translator)
+    {
+        $this->linkGenerator = $linkGenerator;
+        $this->mailer = $mailer;
+        $this->templateFactory = $templateFactory;
+        $this->translator = $translator;
+    }
 
-	public function sendMail($to, $bcc, $subject, $templateFile, $params)
-	{
-		$mailFrom = $this->settingsRepository->findOneBy(["key" => Settings::EMAIL_FROM])
-			->getValue();
 
-		$latte = new Engine();
+    public function send(): void
+    {
+        $params = [
+            'orderId' => 123,
+        ];
+        $template = $this->createMailTemplate();
+        $html = $template->renderToString(__DIR__ . '/../templates/email.latte', $params);
 
-		$html = $latte->renderToString($templateFile, $params);
+        $mail = new Message();
+        $mail->setFrom('Franta <franta@example.com>')
+            ->addTo('petr@example.com')
+            ->setHtmlBody($html);
 
-		$mail = new Message;
+        $this->mailer->send($mail);
+    }
 
-		$mail->setFrom($mailFrom)
-			->addTo($to)
-			->setSubject($subject)
-			->setHtmlBody($html);
-
-		if ($bcc) {
-			$mail->addBcc($bcc);
-		}
-
-		$this->mailer->send($mail);
-	}
+    private function createMailTemplate(): ITemplate
+    {
+        $template = $this->templateFactory->createTemplate();
+        $template->getLatte()->addProvider('uiControl', $this->linkGenerator);
+        return $template;
+    }
 }
