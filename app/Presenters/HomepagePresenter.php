@@ -9,14 +9,15 @@ use App\Services\EmailSender;
 final class HomepagePresenter extends BasePresenter
 {
 
-    /**
-     * @var EmailSender
-     * @inject
-     */
-    public $emailSender;
+	/**
+	 * @var EmailSender
+	 * @inject
+	 */
+	public $emailSender;
 
-    public function actionDefault() {
-        $this->emailSender->send();
-    }
+	public function actionDefault()
+	{
+		$this->emailSender->send();
+	}
 
 }
